@@ -19,6 +19,14 @@ from rest_framework.permissions import IsAuthenticated
 from twilio.rest import Client
 
 
+
+
+@api_view(['GET'])
+def get_started(request):
+      return Response("Welcome", status=status.HTTP_200_OK)
+
+
+
 @api_view(['GET'])
 def getnotifications(request, rollno):
     data = Notification.objects.filter(roll_number=rollno)

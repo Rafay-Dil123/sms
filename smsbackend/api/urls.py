@@ -3,6 +3,7 @@ from .views import update_student_marks
 from . import views
 
 urlpatterns = [
+    path("", views.get_started, name="welcome"),
     path("student-login/", views.student_login, name="login"),
     path("teacher-login/", views.teacher_login, name="login"),
     path("student-edit/", views.student_edit, name="student_edit"),
