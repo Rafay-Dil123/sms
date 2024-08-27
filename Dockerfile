@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 8000
 
 # Command to start the server
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "smsbackend.wsgi"]
+CMD ["gunicorn", "--bind", "127.0.0.1:8000", "smsbackend.wsgi"]
