@@ -14,5 +14,5 @@ COPY . .
 # Expose the server port
 EXPOSE 8000
 
-# Command to start the server
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "myproject.wsgi"]
+# Run migrations and start the server
+CMD ["sh", "-c", "python manage.py migrate && gunicorn --bind 0.0.0.0:8000 myproject.wsgi"]
