@@ -15,5 +15,5 @@ COPY . .
 EXPOSE 8000
 
 # Command to start the server
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "sms\Student-management-system\smsbackend\manage.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "apps.py"]
 
